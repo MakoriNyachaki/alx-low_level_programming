@@ -1,27 +1,33 @@
 /**
- * main - Prints all possible combinations of two different digits,
- *        in ascending order, separated by a comma followed by a space.
+ * main - The success combination in business is
  *
  * Return: Always 0 (Success).
  */
 int main(void)
 {
-	int digit1, digit2;
+	int num1;
+	int num2;
+	int num3;
 
-	for (digit1 = 0; digit1 < 9; digit1++)
+	for (num3 = 0 ; num3 != 8 ; num3++)
 	{
-		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
+		for (num1 = h + 1 ; num1 != 9 ; num1++)
 		{
-			putchar((digit1 % 10) + '0');
-			putchar((digit2 % 10) + '0');
-			if (digit1 == 8 && digit2 == 9)
-				continue;
-			putchar(',');
-			putchar(' ');
+			num2 = num1 + 1;
+			do {
+				putchar('0' + num3);
+				putchar('0' + num1);
+				putchar('0' + num2);
+				if (num3 != 7)
+				{
+					putchar(',');
+					putchar(32);
+				}
+				num2++;
+			} while (num2 != 10);
 		}
 	}
-
 	putchar('\n');
-
 	return (0);
+
 }
