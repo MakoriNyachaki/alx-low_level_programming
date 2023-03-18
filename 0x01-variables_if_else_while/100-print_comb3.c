@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Prints the numbers from 00 to 99, numbers separated by
- * a comma followed by a space, in ascending order.
+ * main - Prints the number 00 to 89
  *
  * Return: Always 0 (Success).
  */
@@ -10,27 +9,20 @@ int main(void)
 {
 	int digit1, digit2;
 
-	for (digit1 = 0; digit1 < 10; digit1++)
+	for (digit1 = 0; digit1 < 9; digit1++)
 	{
-		for (digit2 = 0; digit2 < 10; digit2++)
-		{
-			if(digit1 !=10)
+		digit2 = digit1 + 1;
+		do {
+			putchar('0' + digit1);
+			putchar('0' + digit2);
+			if (digit1 < 8)
 			{
-				putchar((digit1 % 10) + '0');
+				putchar(',');
+				putchar(32);
 			}
-			if(digit2 % 10 != 0)
-			{
-				putchar((digit2 % 10) + '0');
-			}
-
-			if (digit1 == 9 && digit2 == 9)
-				continue;
-			putchar(',');
-			putchar(' ');
-		}
+			digit2++;
+		} while (digit2 < 10);
 	}
-
 	putchar('\n');
-
 	return (0);
 }
