@@ -8,7 +8,7 @@ void print_alphabet(void)
 	int j;
 
 	j = 0;
-	while (j <= 10)
+	while (j < 10)
 	{
 		i = 'a';
 		while (i <= 'z')
