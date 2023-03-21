@@ -12,13 +12,13 @@ int main(void)
 	s5 = 0;
 	sum = 0;
 
-	for (i = 0; i <1024; i++)
+	for (i = 0; i < 1024; i++)
 	{
-		if((i % 3) == 0)
+		if ((i % 3) == 0)
 		{
 			s3 = s3 + i;
 		}
-		else if((i % 5) == 0)
+		else if ((i % 5) == 0)
 		{
 			s5 = s5 + i;
 		}
