@@ -13,7 +13,7 @@ int main(void)
 	printf("%d, %d\n", f1, f2);
 	while (n <= 50)
 	{
-		unsigned long f3;
+		long int f3;
 
 		printf("%lu, ", f3);
 		/* @f3: Next term */
