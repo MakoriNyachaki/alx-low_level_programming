@@ -5,23 +5,25 @@
  */
 void print_to_98(int n)
 {
-	n = 0;
+	n = n;
 
-	if (n <= 98)
+	if (n < 98)
 	{
-		while (n < 99)
+		while (n < 98)
 		{
 			printf("%d, ", n);
 			n++;
 		}
+		printf("%d\n", 98);
 	}
-	else if (n >= 98)
+	else
 	{
 		while (n >= 98)
 		{
 			printf("%d, ", n);
 			n--;
 		}
+		printf("%d\n", 98);
 	}
 }
 
