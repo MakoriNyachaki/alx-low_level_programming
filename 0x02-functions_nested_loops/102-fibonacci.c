@@ -16,6 +16,10 @@ int main(void)
 		long int f3;
 
 		printf("%lu, ", f3);
+		if (n == 50)
+			putchar('\n');
+		else
+			printf(", ");
 		/* @f3: Next term */
 		f3 = f1 + f2;
 		f1 = f2;
