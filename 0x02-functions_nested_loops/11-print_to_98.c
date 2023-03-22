@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * print_to_98 - function entry
  * @n: integer where to start from
@@ -9,19 +9,19 @@ void print_to_98(int n)
 
 	if (n <= 98)
 	{
-		while (n <= 98)
+		while (n < 99)
 		{
-			_putchar(n + '0');
-			_putchar(',');
-			_putchar(' ');
-			n++;
+			printf("%d, ", n);
+			n++
 		}
 	}
-	else
+	else if (n >= 98)
 	{
-		_putchar(n + '0');
-		_putchar(',');
-		_putchar(' ');
-		n--;
+		while (n >= 98)
+		{
+			printf("%d, ", n);
+			n--;
+		}
 	}
 }
+
