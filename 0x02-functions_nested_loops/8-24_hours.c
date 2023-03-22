@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * jack_buer - function entry point
+ * jack_bauer - function entry point
  */
-void jack_buer(void)
+void jack_bauer(void)
 {
 	int i, j;
 
