@@ -24,7 +24,7 @@ int main(void)
 		putchar(pass[a] + '0');
 		if ((2772 - sum) - '0' < 78)
 		{
-			n = 2772 - sum - '0';
+			b = 2772 - sum - '0';
 			sum += b;
 			putchar(b + '0');
 			break;
