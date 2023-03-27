@@ -2,11 +2,10 @@
 /**
  * reset_to_98 - Function entry point
  * @n: pointer to variable n
- * Return: n
+ * Return: 0 always success
  */
 void reset_to_98(int *n)
 {
-	n = 98;
 	*n = &n;
-	return (n);
+	return (0);
 }
