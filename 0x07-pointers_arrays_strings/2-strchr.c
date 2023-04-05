@@ -11,7 +11,7 @@ char *_strchr(char *s, char c)
 {
 	char *r;
 
-	if (s = '\0')
+	if (s != '\0')
 	{
 		return (NULL);
 	}
@@ -22,9 +22,9 @@ char *_strchr(char *s, char c)
 			if (*s == c)
 			{
 				r = s;
-				s++;
 			}
+			*s++;
 		}
-		return (r)
+		return (r);
 	}
 }
