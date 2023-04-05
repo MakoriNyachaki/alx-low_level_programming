@@ -9,7 +9,7 @@
 
 char *_strchr(char *s, char c)
 {
-	char *r;
+	int r;
 
 	if (s != '\0')
 	{
@@ -17,14 +17,13 @@ char *_strchr(char *s, char c)
 	}
 	else
 	{
-		while (*s != '\0')
+		while (1)
 		{
-			if (*s == c)
+			r = *s++;
+			if (r == c)
 			{
-				r = s;
+				return (s - 1);
 			}
-			*s++;
 		}
-		return (r);
 	}
 }
