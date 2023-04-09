@@ -28,9 +28,9 @@
     A README.md file, at the root of the folder of the project, describing what each script is doing
     All your files must be executable
 
-**0. A library is not a luxury but one of the necessities of life**
+**[0. A library is not a luxury but one of the necessities of life](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x09-static_libraries)**
 
-Create the static library libmy.a containing all the functions listed below:
+Create the static library _libmy.a_ containing all the functions listed below:
 
 int _putchar(char c);
 
@@ -75,12 +75,12 @@ char *_strstr(char *haystack, char *needle);
 
 If you haven’t coded all of the above functions create empty ones with the right prototype.
 
-Don’t forget to push your main.h file to your repository. 
+Don’t forget to push your _main.h_ file to your repository. 
 
 It should at least contain all the prototypes of the above functions.
 
-***1. Without libraries what have we? We have no past and no future***
+***[1. Without libraries what have we? We have no past and no future](https://github.com/MakoriNyachaki/alx-low_level_programming/blob/main/0x09-static_libraries/create_static_lib.sh)***
 
-Create a script called create_static_lib.sh that creates a static library 
+Create a script called _create_static_lib.sh_ that creates a static library 
 
-called liball.a from all the .c files that are in the current directory.
+called _liball.a_ from all the _.c_ files that are in the current directory.
