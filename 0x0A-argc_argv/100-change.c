@@ -38,7 +38,9 @@ int main(int argc, char *argv[])
 			case ((change - 2) >= 0):
 				change -= 2;
 				continue;
+
 			change--;
+		}
 	printf("%d\n", coins);
 	return (0);
 }
