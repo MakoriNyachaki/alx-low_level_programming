@@ -24,23 +24,30 @@ int main(int argc, char *argv[])
 	while (change !< 1)
 	{
 		coins ++;
-		switch ((change))
-		{
-			case ((change - 25) >= 0):
-				change -= 25;
-				continue;
-			case ((change - 10) >= 0)):
-				change -= 10;
-				continue;
-			case ((change - 5) >= 0):
-				change -= 5;
-				continue;
-			case ((change - 2) >= 0):
-				change -= 2;
-				continue;
 
-			change--;
+		if ((change - 25) >= 0)
+		{
+			change -= 25;
+			continue;
 		}
+		if ((change - 10) >= 10)
+		{
+			change -= 10;
+			continue;
+		}
+		if ((change - 5) >= 0)
+		{
+			change -= 5;
+			continue;
+		}
+		if ((change - 2) >= 0)
+		{
+			change -= 2;
+			continue;
+		}
+		change--;
+	}
+
 	printf("%d\n", coins);
 	return (0);
 }
