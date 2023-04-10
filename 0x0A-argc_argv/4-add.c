@@ -50,26 +50,27 @@ int atoi(char *s)
 
 int main(int argc, char *argv[])
 {
-	int sum, num, num1;
+	int sum, num, index;
 
-	num = 1;
-	num1 = 0;
+	sum = 0;
 
-	while (num < argc)
+	if (argc > 1)
 	{
-		num1 = 0;
-
-		while (argv[num][num1])
+		for (index = 1; index < argc; index++)
 		{
-			if (argv[num][num1] < '0' || argv[num][num1] > '9')
+			num = atoi(argv[index]);
+			if (num >= 0)
 			{
-				printf("Error\n");
-				return (1);
+				sum += num;
 			}
-			num1++;
+			printf("Error\n");
+			return (1);
 		}
-		sum += atoi(argv[num]);
-		num++;
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
 	}
 	printf("%d\n", sum);
 	return (0);
