@@ -11,10 +11,10 @@
 
 int main(int argc, char *argv[])
 {
-	int x, y, res;
+	int num, index, res;
 	int coins[] = {25, 10, 5, 2, 1};
 
-	y = 0;
+	index = 0;
 
 	if (argc != 2)
 	{
@@ -22,23 +22,23 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	x = _atoi(argv[1]);
+	num = _atoi(argv[1]);
 	res = 0;
 
-	if (x < 0)
+	if (num < 0)
 	{
 		printf("0\n");
 		return (0);
 	}
 
-	while (y < 5 && x >= 0)
+	while (index < 5 && index >= 0)
 	{
-		while (x >= coins[y])
+		while (num >= coins[index])
 		{
 			res++;
-			x -= coins[y];
+			num -= coins[index];
 		}
-		y++;
+		index++;
 	}
 
 	printf("%d\n", res);
