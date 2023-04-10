@@ -63,8 +63,11 @@ int main(int argc, char *argv[])
 			{
 				sum += num;
 			}
-			printf("Error\n");
-			return (1);
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 	}
 	else
