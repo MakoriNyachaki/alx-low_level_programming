@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	for (num3 = 1; k < argc; num3++)
+	for (num3 = 1; num3 < argc; num3++)
 	{
 		num4 = atoi(argv[num3]);
 		if (num4 >= 0)
