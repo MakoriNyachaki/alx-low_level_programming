@@ -14,8 +14,6 @@ int main(int argc, char *argv[])
 	int num, index, res;
 	int coins[] = {25, 10, 5, 2, 1};
 
-	index = 0;
-
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -31,7 +29,7 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	for (; index < 5 && num >= 0; index++)
+	for (index = 1; index <= argc && num >= 0; index++)
 	{
 		while (num >= coins[index])
 		{
