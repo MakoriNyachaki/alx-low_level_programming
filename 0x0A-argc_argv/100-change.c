@@ -31,14 +31,13 @@ int main(int argc, char *argv[])
 		return (0);
 	}
 
-	while (index < 5 && index >= 0)
+	for (; index < 5 && index >= 0; index++)
 	{
 		while (num >= coins[index])
 		{
 			res++;
 			num -= coins[index];
 		}
-		index++;
 	}
 
 	printf("%d\n", res);
