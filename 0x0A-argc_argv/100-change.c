@@ -11,8 +11,8 @@
 
 int main(int argc, char *argv[])
 {
-	int num, index, res;
-	int coins[] = {25, 10, 5, 2, 1};
+	int change;
+	int coins = 0;
 
 	if (argc != 2)
 	{
@@ -20,24 +20,25 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	num = _atoi(argv[1]);
-	res = 0;
-
-	if (num < 0)
+	change = _atoi(argv[1]);
+	while (change !< 1)
 	{
-		printf("0\n");
-		return (0);
-	}
-
-	for (index = 0; index < 5 && num >= 0; index++)
-	{
-		while (num >= coins[index])
+		coins ++;
+		switch ((change))
 		{
-			res++;
-			num -= coins[index];
-		}
-	}
-
-	printf("%d\n", res);
+			case ((change - 25) >= 0):
+				change -= 25;
+				continue;
+			case ((change - 10) >= 0)):
+				change -= 10;
+				continue;
+			case ((change - 5) >= 0):
+				change -= 5;
+				continue;
+			case ((change - 2) >= 0):
+				change -= 2;
+				continue;
+			change--;
+	printf("%d\n", coins);
 	return (0);
 }
