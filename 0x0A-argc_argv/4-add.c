@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 		for (index = 1; index < argc; index++)
 		{
 			num = atoi(argv[index]);
-			if (num >= 0)
+			if (num >= 0 || (num > '0' && num < '9'))
 			{
 				sum += num;
 			}
