@@ -13,6 +13,8 @@ char *create_array(unsigned int size, char c)
 	int index;
 	char *arr;
 
+	index = 0;
+
 	if (size == 0)
 		return (NULL);
 
