@@ -21,7 +21,7 @@ char *str_concat(char *s1, char *s2)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	while (s1[index] || s22[index])
+	while (s1[index] || s2[index])
 	{
 		len++;
 		index++;
