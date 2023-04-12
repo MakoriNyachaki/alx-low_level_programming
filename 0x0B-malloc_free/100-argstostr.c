@@ -21,11 +21,11 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (; a < ac; a++)
 	{
-		b = 0;
 		for (; av[a][b]; b++)
 			n++;
 		n++;
 	}
+
 	str = malloc((sizeof(char) * n) + 1);
 	if (str != NULL)
 	{
