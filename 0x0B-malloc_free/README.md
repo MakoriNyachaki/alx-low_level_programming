@@ -2,8 +2,10 @@
 ### Resources
 
 [1. Automatic and dynamic allocation, malloc and free](https://intranet.alxswe.com/concepts/62)
+
 [2. 0x0a - malloc & free - quick overview.pdf](https://intranet.alxswe.com/rltoken/7q6RmWq86XkUhvmlhrg9bg)
-[3. Dynamic memory allocation in C - malloc calloc realloc free (stop at 6:50)](https://intranet.alxswe.com/rltoken/pfGb2oVIYLO_1a8jtFGQYw)
+
+[3. Dynamic memory allocation in C - malloc calloc realloc free](https://intranet.alxswe.com/rltoken/pfGb2oVIYLO_1a8jtFGQYw)**(stop at 6:50)**
 
 ## Requirements
 
@@ -35,9 +37,9 @@
     The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called main.h
 
     Don’t forget to push your header file
-## Tasks
+## [Tasks](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x0B-malloc_free)
 
-[0. Float like a butterfly, sting like a bee]()
+[0. Float like a butterfly, sting like a bee](https://github.com/MakoriNyachaki/alx-low_level_programming/blob/main/0x0B-malloc_free/0-create_array.c)
 
 Write a function that creates an array of chars, and initializes it with a specific char.
 
@@ -47,7 +49,7 @@ Write a function that creates an array of chars, and initializes it with a speci
 
     Returns a pointer to the array, or NULL if it fails
 
-[1. The woman who has no imagination has no wings]()
+[1. The woman who has no imagination has no wings](https://github.com/MakoriNyachaki/alx-low_level_programming/blob/main/0x0B-malloc_free/1-strdup.c)
 
 Write a function that returns a pointer to a newly allocated space in memory, which contains a copy of the string given as a parameter.
 
@@ -61,7 +63,7 @@ Write a function that returns a pointer to a newly allocated space in memory, wh
 
 FYI: The standard library provides a similar function: strdup. Run man strdup to learn more.
 
-[2. He who is not courageous enough to take risks will accomplish nothing in life]()
+[2. He who is not courageous enough to take risks will accomplish nothing in life](https://github.com/MakoriNyachaki/alx-low_level_programming/blob/main/0x0B-malloc_free/2-str_concat.c)
 
 Write a function that concatenates two strings.
 
@@ -73,7 +75,7 @@ Write a function that concatenates two strings.
 
     The function should return NULL on failure
 
-[3. If you even dream of beating me you'd better wake up and apologize]()
+[3. If you even dream of beating me you'd better wake up and apologize](https://github.com/MakoriNyachaki/alx-low_level_programming/blob/main/0x0B-malloc_free/3-alloc_grid.c)
 
 Write a function that returns a pointer to a 2 dimensional array of integers.
 
@@ -85,7 +87,7 @@ Write a function that returns a pointer to a 2 dimensional array of integers.
 
     If width or height is 0 or negative, return NULL
 
-[4. It's not bragging if you can back it up]()
+[4. It's not bragging if you can back it up](https://github.com/MakoriNyachaki/alx-low_level_programming/blob/main/0x0B-malloc_free/4-free_grid.c)
 
 Write a function that frees a 2 dimensional grid previously created by your alloc_grid function.
 
@@ -93,7 +95,7 @@ Write a function that frees a 2 dimensional grid previously created by your allo
 
     Note that we will compile with your alloc_grid.c file. Make sure it compiles.
 
-[5. It isn't the mountains ahead to climb that wear you out; it's the pebble in your shoe ]()
+[5. It isn't the mountains ahead to climb that wear you out; it's the pebble in your shoe ](https://github.com/MakoriNyachaki/alx-low_level_programming/blob/main/0x0B-malloc_free/100-argstostr.c)
 
 Write a function that concatenates all the arguments of your program.
 
@@ -105,7 +107,7 @@ Write a function that concatenates all the arguments of your program.
 
     Each argument should be followed by a \n in the new string
 
-[6. I will show you how great I am]()
+[6. I will show you how great I am](https://github.com/MakoriNyachaki/alx-low_level_programming/blob/main/0x0B-malloc_free/101-strtow.c)
 
 Write a function that splits a string into words.
 
