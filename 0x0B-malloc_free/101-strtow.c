@@ -52,6 +52,7 @@ char **strtow(char *str)
 			for (index = 0; index <= size; index++)
 			{
 				if (str[index] == ' ' || str[index] == '\0')
+				{
 					if (r)
 					{
 						last = index;
@@ -67,6 +68,7 @@ char **strtow(char *str)
 						}
 						return (NULL);
 					}
+				}
 				else if (r++ == 0)
 					first = index;
 			}
