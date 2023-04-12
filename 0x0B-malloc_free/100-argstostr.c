@@ -31,17 +31,20 @@ char *argstostr(int ac, char **av)
 	}
 
 	str = malloc((sizeof(char) * n) + 1);
+
 	if (str == NULL)
 		return (NULL);
-	for (; a < ac; a++)
+	while (a < ac)
 	{
-		for (; av[a][b]; b++)
+		while (av[a][b])
 		{
 			str[index] = av[a][b];
+			b++;
 			index++;
 		}
 		str[index] = '\n';
 		index++;
+		a++;
 	}
 	str[index] = '\0';
 	return (str);
