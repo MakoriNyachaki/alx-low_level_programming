@@ -29,9 +29,8 @@ char *_strdup(char *str)
 	if (dup == NULL)
 		return (NULL);
 
-	while (index < count)
+	while ((dup[index] = str[index]) != '\0')
 	{
-		*(dup + index) = *(str + index);
 		index++;
 	}
 	return (dup);
