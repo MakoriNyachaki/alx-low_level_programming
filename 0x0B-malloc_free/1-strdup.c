@@ -12,10 +12,10 @@
 char *_strdup(char *str)
 {
 	char *dup;
-	int index, len;
+	int index, count;
 
 	index = 0;
-	len = 0;
+	count = 0;
 
 	if (str == NULL)
 	{
@@ -23,13 +23,14 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		dup = malloc(sizeof(char) * (len + 1));
+		while (str[index])
+			count++;
+		dup = malloc(sizeof(char) * (count + 1));
 		if (dup != NULL)
 		{
-			while (str[index])
+			while (index < count)
 			{
-				len++;
-				dup[index] = str[index];
+				*(dup + index) = *(str + index);
 				index++;
 			}
 		}
@@ -38,7 +39,5 @@ char *_strdup(char *str)
 			return (NULL);
 		}
 	}
-	dup[len] = '\0';
-
 	return (dup);
 }
