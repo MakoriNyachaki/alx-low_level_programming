@@ -30,20 +30,18 @@ char *str_concat(char *s1, char *s2)
 
 	_str_concat = malloc((len0 + len1) + 1);
 
-	if (_str_concat != NULL)
-	{
-		while (index < len0)
-		{
-			*(_str_concat + index) = *(s1 + index);
-			index++;
-		}
-		while (i < len1)
-		{
-			*(_str_concat + 1) = *(s2 + i);
-			i++;
-		}
-	}
-	else
+	if (_str_concat == NULL)
 		return (NULL);
+
+	while (index < len0)
+	{
+		*(_str_concat + index) = *(s1 + index);
+		index++;
+	}
+	while (i < len1)
+	{
+		*(_str_concat + 1) = *(s2 + i);
+		i++;
+	}
 	return (_str_concat);
 }
