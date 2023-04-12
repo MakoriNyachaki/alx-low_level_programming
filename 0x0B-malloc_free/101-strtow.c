@@ -39,7 +39,7 @@ int count_word(char *s)
 char **strtow(char *str)
 {
 	char **arr, *strs;
-	int index, p = 0, q = 0, word, r = 0, first, last, size = 0;
+	int index, p = 0, r = 0, word, first, last, size = 0;
 
 	while (*(str + size))
 		size++;
@@ -58,8 +58,8 @@ char **strtow(char *str)
 						strs = (char *) malloc(sizeof(char) * (r + 1));
 						if (strs != NULL)
 						{
-							while (begin < last)
-								*strs++ = str[begin++];
+							while (first < last)
+								*strs++ = str[first++];
 							*strs = '\0';
 							arr[p] = strs - r;
 							p++;
@@ -68,7 +68,7 @@ char **strtow(char *str)
 						return (NULL);
 					}
 				else if (r++ == 0)
-					begin = index;
+					first = index;
 			}
 			arr[p] = NULL;
 			return (arr);
