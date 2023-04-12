@@ -26,17 +26,13 @@ char *_strdup(char *str)
 	
 	dup = malloc(sizeof(char) * (count + 1));
 	
-	if (dup != NULL)
-	{
-		while (index < count)
-		{
-			*(dup + index) = *(str + index);
-			index++;
-		}
-	}
-	else
-	{
+	if (dup == NULL)
 		return (NULL);
+	
+	while (index < count)
+	{
+		*(dup + index) = *(str + index);
+		index++;
 	}
 	return (dup);
 }
