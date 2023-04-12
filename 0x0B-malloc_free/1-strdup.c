@@ -21,23 +21,22 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
+	while (str[index])
+		count++;
+	
+	dup = malloc(sizeof(char) * (count + 1));
+	
+	if (dup != NULL)
+	{
+		while (index < count)
+		{
+			*(dup + index) = *(str + index);
+			index++;
+		}
+	}
 	else
 	{
-		while (str[index])
-			count++;
-		dup = malloc(sizeof(char) * (count + 1));
-		if (dup != NULL)
-		{
-			while (index < count)
-			{
-				*(dup + index) = *(str + index);
-				index++;
-			}
-		}
-		else
-		{
-			return (NULL);
-		}
+		return (NULL);
 	}
 	return (dup);
 }
