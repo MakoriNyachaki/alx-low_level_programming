@@ -32,15 +32,18 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	while (s1[index])
+	else
 	{
-		_str_concat[i++] = s1[index];
-		index++;
+		while (s1[index])
+		{
+			_str_concat[i++] = s1[index];
+			index++;
+		}
+		while (s2[index])
+		{
+			_str_concat[i++] = s2[index];
+			index++;
+		}
+		return (_str_concat);
 	}
-	while (s2[index])
-	{
-		_str_concat[i++] = s2[index];
-		index++;
-	}
-	return (_str_concat);
 }
