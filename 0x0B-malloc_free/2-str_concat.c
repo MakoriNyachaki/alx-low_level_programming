@@ -31,16 +31,13 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	else
+	for (; s1[index]; index++)
 	{
-		for (; s1[index]; index++)
-		{
-			_str_concat[i++] = s1[index];
-		}
-		for (; s2[index]; index++)
-		{
-			_str_concat[i++] = s2[index];
-		}
-		return (_str_concat);
+		_str_concat[i++] = s1[index];
 	}
+	for (; s2[index]; index++)
+	{
+		_str_concat[i++] = s2[index];
+	}
+	return (_str_concat);
 }
