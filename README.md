@@ -23,3 +23,5 @@
 ## [11. 0x0A-arc_argv](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x0A-argc_argv)
 
 ## [12. 0x0B-malloc_free](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x0B-malloc_free)
+
+## [0x0C-more_malloc_free](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x0C-more_malloc_free)
