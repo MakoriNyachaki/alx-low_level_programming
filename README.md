@@ -24,4 +24,4 @@
 
 ## [12. 0x0B-malloc_free](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x0B-malloc_free)
 
-## [0x0C-more_malloc_free](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x0C-more_malloc_free)
+## [13. 0x0C-more_malloc_free](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x0C-more_malloc_free)
