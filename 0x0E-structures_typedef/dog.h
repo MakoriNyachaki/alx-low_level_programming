@@ -20,6 +20,5 @@ struct dog
  */
 
 typedef struct dog my_dog;
-int _putchar(char);
 
 #endif
