@@ -8,17 +8,12 @@
  * @age: age
  * @owner: owner of the poppy
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
 
-};
-/**
- * my_dog - new structure for the dog
- */
-
-typedef struct dog my_dog;
+} my_dog;
 
 #endif
