@@ -25,3 +25,7 @@
 ## [12. 0x0B-malloc_free](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x0B-malloc_free)
 
 ## [13. 0x0C-more_malloc_free](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x0C-more_malloc_free)
+
+## [14. 0x0D-preprocessor](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x0D-preprocessor)
+
+## [15. 0x0E-structures_typedef](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x0E-structures_typedef)
