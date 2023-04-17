@@ -9,9 +9,11 @@
  */
 int _strlen(char *s)
 {
-	int p = 0;
+	int p;
 
-	for (; *s != '\0'; s++)
+	p = 0;
+
+	while (s[p] != '\0')
 	{
 		p++;
 	}
@@ -57,22 +59,27 @@ dog_t *new_dog(char *name, float age, char owner)
 	l2 = _strlen(owner);
 
 	charlie = malloc(sizeof(charlie));
+
 	if (charlie == NULL)
 		return (NULL);
 
 	charlie->name = malloc(sizeof(chr) * (l1 + 1));
+
 	if (charlie->name == NULL)
 	{
 		free(charlie);
 		return (NULL);
 	}
+
 	charlie->owner = malloc(sizeof(char) * (l2 + 1));
+
 	if (charlie->owner == NULL)
 	{
 		free(charlie);
 		free(charlie->name);
 		return (NULL);
 	}
+
 	_strcpy(charlie->name);
 	_strcpy(charlie->owner);
 	dog->age = age;
