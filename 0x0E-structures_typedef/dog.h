@@ -17,22 +17,9 @@ struct dog Dog
 };
 /**
  * my_dog - new structure for the dog
- * @name: name
- * @age: age
- * @owner: owner
- * Return: my_dog
  */
 
-struct dog *my_dog(char *name, float age, char *owner)
-{
-	struct dog *Dog;
+typedef struct dog my_dog;
+int _putchar(char);
 
-	Dog = malloc(sizeof(struct dog));
-	if (my_dog == NULL)
-		return (NULL);
-	Dog->name = name;
-	Dog->age = age;
-	Dog->owner = owner;
-	return (Dog);
-}
 #endif
