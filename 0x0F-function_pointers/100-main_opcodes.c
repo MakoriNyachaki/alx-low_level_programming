@@ -12,12 +12,12 @@
 
 int main(int argc, char **argv)
 {
-	int b, index;
+	int byte_val, index;
 	char *array;
 
 	index = 0;
 
-	if (arc != 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
