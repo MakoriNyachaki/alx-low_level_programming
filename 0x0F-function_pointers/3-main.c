@@ -1,7 +1,4 @@
 #include "3-calc.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 
 /**
  * main - programs' entry point
@@ -15,29 +12,29 @@
 
 int main(int argc, char *argv[])
 {
-	char operation;
-
-	operation = argv[2];
-
-	int (*func)(int, int);
+	int output;
+	int (*fxn)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	else
-	{
-		func = get_op_func(operation);
 
-		if (!func)
-		{
-			printf("Error\n");
-			exit(99);
-		}
+	fxn = get_op_func(argv[2]);
+
+	if (!fxn)
+	{
+		printf("Error\n");
+		exit(99);
 	}
-	printf("%d\n", func(atoi(argv[1]), atoi(argv[3])));
+
+	if ((*argv[] == '/' && atoi(argv[1] == 0))
+		|| (*argv[] == '%' && atoi(argv[3])))
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	printf("%d\n", get_op_func(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
-
-
