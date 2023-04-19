@@ -23,9 +23,9 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 
-	b = atoi(argv[1]);
+	byte_val = atoi(argv[1]);
 
-	if (b < 0)
+	if (byte_val < 0)
 	{
 		printf("Error\n");
 		exit(2);
@@ -33,9 +33,9 @@ int main(int argc, char **argv)
 
 	array = (char *)main;
 
-	while (index < b)
+	while (index < byte_val)
 	{
-		if (index == b - 1)
+		if (index == byte_val - 1)
 		{
 			printf("%02hhx\n", array[index]);
 			break;
