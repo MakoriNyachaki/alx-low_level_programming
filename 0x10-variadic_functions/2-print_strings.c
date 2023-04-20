@@ -26,9 +26,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		while (index < n)
 		{
 			printf("%s", va_arg(vl, char*));
+			index++;
 			if (index < n && separator)
 				printf("%s", separator);
-			index++;
 		}
 	}
 	va_end(vl);
