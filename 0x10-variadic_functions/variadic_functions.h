@@ -5,6 +5,18 @@
 #include <stdarg.h>
 #include <stdio.h>
 
+/**
+ * struct _types - structure of types
+ *
+ * @chr: string representation
+ * @ptr: fxn pointer
+ */
+
+typedef struct _types
+{
+	char *chr;
+	void (*ptr)(va_list);
+} f_type;
 
 	int _putchar(char c);
 	int sum_them_all(const unsigned int n, ...);
