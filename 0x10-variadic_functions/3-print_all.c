@@ -20,7 +20,7 @@ void _integer(va_list n)
 
 void _character(va_list vl_char)
 {
-	printf("%c", va_arg(vl_char, char));
+	printf("%c", va_arg(vl_char, int));
 }
 
 /**
@@ -31,7 +31,7 @@ void _character(va_list vl_char)
 
 void _float(va_list vl_fl)
 {
-	printf("%f", va_arg(vl_fl, float));
+	printf("%f", va_arg(vl_fl, double));
 }
 
 /**
