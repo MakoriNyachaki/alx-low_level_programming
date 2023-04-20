@@ -10,13 +10,13 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
-	unsigned int index = 0;
-	int add = 0;
-
-	va_list la;
-
 	if (n != 0)
 	{
+		unsigned index = 0;
+		int add = 0;
+
+		va_list la;
+
 		va_start(la, n);
 
 		while (index < n)
@@ -26,10 +26,11 @@ int sum_them_all(const unsigned int n, ...)
 		}
 
 		va_end(la);
+
+		return (add);
 	}
 	else
 	{
 		return (0);
 	}
-	return (add);
 }
