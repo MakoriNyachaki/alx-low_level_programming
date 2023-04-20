@@ -12,7 +12,7 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 
-	if (separator && n)
+	if (separator)
 	{
 		unsigned int num = 0;
 
