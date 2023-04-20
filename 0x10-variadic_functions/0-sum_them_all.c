@@ -24,8 +24,12 @@ int sum_them_all(const unsigned int n, ...)
 			sum += va_arg(la, int);
 			index++;
 		}
+
 		va_end(la);
 		return (add);
 	}
-	return (0);
+	else
+	{
+		return (0);
+	}
 }
