@@ -12,7 +12,7 @@ int sum_them_all(const unsigned int n, ...)
 {
 	if (n != 0)
 	{
-		unsigned index = 0;
+		unsigned int index = 0;
 		int add = 0;
 
 		va_list la;
