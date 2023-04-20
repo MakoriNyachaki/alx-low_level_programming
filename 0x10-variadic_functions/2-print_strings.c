@@ -17,20 +17,17 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	index = 0;
 	va_start(vl, n);
 
-	if (!(va_arg(vl, char*)))
+	while (index < n)
 	{
-		printf("nil");
-	}
-	else
-	{
-		while (index < n)
-		{
+		if (!(va_arg(vl, char*)))
+			printf("nil");
+		else
 			printf("%s", va_arg(vl, char*));
-			index++;
-			if (index < n && separator)
-				printf("%s", separator);
-		}
+		index++;
+		if (index <= (n - 1) && separator)
+			printf("%s", separator);
 	}
+
 	va_end(vl);
 	_putchar('\n');
 }
