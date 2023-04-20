@@ -11,21 +11,24 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
-	int k;
+	unsigned int k;
 	int sum = 0;
 
 	va_list vl;
 
-	if (n == 0)
+	if (n != 0)
+	{
+		va_start(vl, n);
+
+		while (k < n)
+		{
+			sum = sum + va_arg(vl, int);
+			k++;
+		}
+	}
+	else
 		return (0);
 
-	va_start(vl, n);
-
-	while (k < n)
-	{
-		sum = sum + va_arg(vl, int);
-		k++;
-	}
 	va_end(vl);
 	return (sum);
 }
