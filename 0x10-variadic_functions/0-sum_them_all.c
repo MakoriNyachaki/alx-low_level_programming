@@ -26,10 +26,10 @@ int sum_them_all(const unsigned int n, ...)
 		}
 
 		va_end(la);
-		return (add);
 	}
 	else
 	{
 		return (0);
 	}
+	return (add);
 }
