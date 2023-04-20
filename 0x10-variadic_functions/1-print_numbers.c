@@ -12,27 +12,19 @@
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 
-	if (separator)
+	unsigned int index = 0;
+
+	va_list vl;
+
+	va_start(vl, n);
+
+	while (index < n)
 	{
-		unsigned int num = 0;
-
-		va_list vl;
-
-		va_start(vl, n);
-
-		while (num < n)
-		{
-			printf("%d", va_arg(vl, int));
-			if (num != (n - 1))
-				printf("%s", separator);
-			num++;
-		}
-		va_end(vl);
-
-	}
-	else
-	{
-		return;
+		printf("%d", va_arg(vl, int));
+		if (index = (n - 1) && separator)
+			printf("%s", separator);
+		index++;
 	}
 	_putchar('\n');
+	va_end(vl);
 }
