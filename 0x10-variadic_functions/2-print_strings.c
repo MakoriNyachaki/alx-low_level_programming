@@ -17,7 +17,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	index = 0;
 	va_start(vl, n);
 
-	if (!(va_args(vl, char*)))
+	if (!(va_arg(vl, char*)))
 	{
 		printf("nil");
 	}
