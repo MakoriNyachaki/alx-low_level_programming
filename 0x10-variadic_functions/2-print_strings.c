@@ -20,7 +20,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	while (index < n)
 	{
 		if (!(va_arg(vl, char*)))
-			printf("nil");
+			printf("(nil)");
 		else
 			printf("%s", va_arg(vl, char*));
 		index++;
