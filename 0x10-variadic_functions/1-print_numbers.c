@@ -29,6 +29,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		}
 		va_end(vl);
 
-		_putchar('\n');
 	}
+	else
+	{
+		return;
+	}
+	_putchar('\n');
 }
