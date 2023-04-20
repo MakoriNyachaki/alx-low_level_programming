@@ -74,11 +74,11 @@ void print_all(const char * const format, ...)
 
 	while (format && format[m])
 	{
-		while (_type[n].chr)
+		while (_types[n].chr)
 		{
 			if (_types[n].chr[0] == format[m])
 			{
-				(_types[n].f)(vl);
+				(_types[n].ptr)(vl);
 				if (format[m + 1])
 					printf(", ");
 			}
