@@ -21,9 +21,11 @@ int sum_them_all(const unsigned int n, ...)
 	va_arg(vl, n);
 	if (k >= 0)
 	{
+		va_arg(vl, n);
+
 		for (; k < n; k++)
 			sum += va_arg(vl, int);
+		va_end(vl);
+		return (sum);
 	}
-	va_end(vl);
-	return (sum);
 }
