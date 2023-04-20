@@ -10,27 +10,20 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
-	if (n != 0)
-	{
-		unsigned int index = 0;
-		int add = 0;
+	unsigned int k = 0;
+	int sum = 0;
 
-		va_list la;
+	va_list vl;
 
-		va_start(la, n);
-
-		while (index < n)
-		{
-			sum = sum + va_arg(la, int);
-			index++;
-		}
-
-		va_end(la);
-
-		return (add);
-	}
-	else
-	{
+	if (n == 0)
 		return (0);
+
+	va_args(vl, n);
+
+	for (; k < n; k++)
+	{
+		sum = sum + va_arg(vl, int);
 	}
+	va_end(vl);
+	return (sum);
 }
