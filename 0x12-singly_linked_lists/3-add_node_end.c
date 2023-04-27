@@ -1,6 +1,32 @@
 #include "lists.h"
 
 /**
+ * _node - creates a new node
+ *
+ * @str: what to add to the node
+ *
+ * Return: ptr to list_t
+ */
+
+list_t *_node(const char *str)
+{
+	list_t new_node;
+	size_t n;
+
+	new_node = malloc(sizeof(list_t));
+
+	if (!new_node)
+		return (NULL);
+	for (n = 0; str[n]; n++)
+		;
+
+	new_node->str = strdup(str);
+	new_node->n = n;
+	new_node->next = NULL;
+	return (new_node);
+}
+
+/**
  * add_node_end -  adds a new node at
  * the end of a list_t list
  *
@@ -12,36 +38,23 @@
 
 list_t *add_node_end(list_t **head, char *str)
 {
-	list_t *new_node, *tmp;
-	unsigned int len = 0;
+	list_t *new_node;
 
-	new_node = malloc(sizeof(list_t));
-	if (!new_node)
-		return (NULL);
-
-	if (!str)
+	if (!(head))
 	{
-		free(new_node);
-		return (NULL);
+		*head = _node(str);
+		return (*head);
 	}
-	for (; str[len]; len++)
-		;
-
-	new_node->str = strdup(str);
-	new_node->len = len;
-	new_node->next = NULL;
-
-	if (*head == NULL)
+	if (*head->next)
 	{
-		*head = new_node;
-		return (new_node);
+		add_node_end(&(*head)->next, str);
 	}
 	else
 	{
-		tmp = *head;
-		while (tmp->next != NULL)
-			tmp = tmp->next;
-		tmp->next = new_node;
+		new_node = _node(str);
+		new_node->next = (*head)->next;
+		(*head)->next = new_node;
 	}
 	return (*head);
 }
+
