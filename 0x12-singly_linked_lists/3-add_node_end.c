@@ -14,12 +14,12 @@ list_t *add_node_end(list_t **head, char *str)
 {
 	list_t *new_node;
 	list_t *tmp = *head;
-	unsigned int len;
+	unsigned int len = 0;
 
-	for (len = 0; str[len]; len++)
+	for (; str[len]; len++)
 		;
 
-	new_node - malloc(sizeof(list_t));
+	new_node = malloc(sizeof(list_t));
 	if (!new_node)
 		return (NULL);
 
