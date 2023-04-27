@@ -1,13 +1,13 @@
-#include "main.h"
+#include <stdio.h>
 
-void makori(void) __attribute__((constructor)) makori(void);
+void _main(void) __attribute__((constructor));
 
 /**
- * makori - executes first before main
+ * _main - executes first before main
  * and it prints some strings
  */
 
-void makori(void)
+void _main(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore my house upon my back!\n");
