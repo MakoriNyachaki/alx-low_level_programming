@@ -1,6 +1,6 @@
 #include "main.h"
 
-void makori(void) __attribute__ ((constructor));
+void makori(void) __attribute__((constructor)) makori(void);
 
 /**
  * makori - executes first before main
