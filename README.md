@@ -29,3 +29,10 @@
 ## [14. 0x0D-preprocessor](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x0D-preprocessor)
 
 ## [15. 0x0E-structures_typedef](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x0E-structures_typedef)
+
+## [16. 0x0F-function_pointers](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x0F-function_pointers)
+
+## [17. 0x10-variadic_functions](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x10-variadic_functions)
+
+## [18. 0x12-singly_linked_list](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x12-singly_linked_lists)
+
