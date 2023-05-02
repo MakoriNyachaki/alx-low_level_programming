@@ -9,18 +9,18 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	size_t count = 0;
-	listint_t *current = *h;
+	size_t num  = 0;
+	listint_t *now = *h;
 
 	if (!*h)
-		goto exit;
+		return (NULL);
 	while (*h)
 	{
-		current = *h;
+		now = *h;
 		*h = (*h)->next;
-		free(current);
-		count++;
+		free(now);
+		num++;
 	}
 	*h = NULL;
-	return (count);
+	return (num);
 }
