@@ -11,41 +11,25 @@
 
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *tmp, *p = NULL;
-
-	if (!head || !(*head))
+	if (*head == NULL)
 		return (NULL);
+	stack < listint_t * > s;
+	listint_t *now = *head;
 
-	if (!(*head)->next)
-		return (*head);
-
-	tmp = *head;
-	while (1)
+	while (now != NULL)
 	{
-		if (p)
-		{
-			p = tmp;
-			tmp = tmp->next;
-			p->next = *head;
-			if (tmp)
-			{
-				*head = p;
-			}
-			else
-			{
-				tmp = p;
-				break;
-			}
-		}
-		else
-		{
-			p = *head;
-			tmp = tmp->next;
-			p->next = NULL;
-			*head = p;
-		}
+		s.push(now);
+		now = now->next;
 	}
-	*head = tmp;
-
+	*head = s.top();
+	s.pop();
+	now = *head;
+	while (!s.empty())
+	{
+		now = now->next;
+		s.pop();
+		now = now->next;
+	}
+	now = now->next;
 	return (*head);
 }
