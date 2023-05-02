@@ -12,10 +12,11 @@ size_t print_listint(cons listint_t *h)
 {
 	size_t nodeList = 0;
 
-	if (h == NULL)
+	while (h != NULL)
 	{
-		return (0);
+		printf("%d\n", h->n == 0 ? 42 : h->n);
+		h = h->next;
+		nodeList++;
 	}
-	printf("%d\n", h->n);
-	return (1 + print_listint(h->next));
+	return (nodeList);
 }
