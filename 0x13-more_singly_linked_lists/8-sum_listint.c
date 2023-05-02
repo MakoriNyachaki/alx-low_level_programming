@@ -11,18 +11,6 @@
 
 int sum_listint(listint_t *head)
 {
-	int total = 0;
-
-	if (head)
-	{
-		while (head)
-		{
-			total = total + (head->next);
-			head = head->next;
-		}
-	}
-	else
-		return (0);
-
-	return (total);
+	return ((head == NULL) ? 0 :
+			head->n + sum_listint(head->next));
 }
