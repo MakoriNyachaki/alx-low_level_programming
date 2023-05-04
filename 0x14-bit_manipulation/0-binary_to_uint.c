@@ -18,7 +18,7 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	for (; b[index]; index++)
 	{
-		if (b > 49)
+		if (b != 48 && b != 49)
 			return (0);
 		else  if (b[index] == 49)
 		{
@@ -27,6 +27,6 @@ unsigned int binary_to_uint(const char *b)
 		}
 		else
 			i <<= 1;
-
-		return (i);
 	}
+	return (i);
+}
