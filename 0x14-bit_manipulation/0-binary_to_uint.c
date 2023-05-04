@@ -12,21 +12,21 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int index = 0, i = 0;
+	unsigned int out = 0;
 
-	if (!b || !*b)
+	if (b == NULL)
 		return (0);
-	for (; b[index]; index++)
+	while (b != '\0')
 	{
-		if (b != 48 && b != 49)
-			return (0);
-		else  if (b[index] == 49)
+		if (*b == '0' || *b == '1')
 		{
-			i <<= 1;
-			i += 1;
+			out <<= 1;
+			out |= (*b - '0');
 		}
 		else
-			i <<= 1;
+		{
+			return (0);
+		}
 	}
-	return (i);
+	return (out);
 }
