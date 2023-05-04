@@ -9,11 +9,11 @@
 
 void print_binary(unsigned long int n)
 {
-	int p = sizeof(unsigned long int) * 8;
-	int m = p - 1;
+	unsigned long int p = (unsigned long int)1 << (sizeof(n) * 8 - 1);
 
-	for (; m >= 0; m--)
+	while (p)
 	{
-		_putchar((p >> m) & 1 ? '1' : '0');
+		_putchar((n & p) ? '1' : '0');
+		p >>= 1;
 	}
 }
