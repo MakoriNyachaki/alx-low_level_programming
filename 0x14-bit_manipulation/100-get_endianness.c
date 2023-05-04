@@ -10,11 +10,5 @@ int get_endianness(void)
 {
 	unsigned int n = 1;
 
-	switch (*(char *)&n)
-	{
-		case 1:
-			return (0);
-		case 0:
-			return (1);
-	}
+	return (*(const char *)&n == 1);
 }
