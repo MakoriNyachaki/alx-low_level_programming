@@ -4,6 +4,7 @@
 /* Includes from the standard libraries */
 
 	#include <stdio.h>
+	#include <stdlib.h>
 
 /* Function Prototypes */
 
