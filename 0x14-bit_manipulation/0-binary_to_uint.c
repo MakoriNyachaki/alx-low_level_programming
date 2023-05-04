@@ -14,11 +14,11 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int index = 0, i = 0;
 
-	if (!*b)
+	if (!b || !*b)
 		return (0);
 	for (; b[index]; index++)
 	{
-		if (b != 48 && b != 49)
+		if (b > 49)
 			return (0);
 		i <<= 1;
 		i += 1;
