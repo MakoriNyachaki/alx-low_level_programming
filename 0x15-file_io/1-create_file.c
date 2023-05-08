@@ -19,16 +19,22 @@ int create_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
-
-	if (text_content == NULL)
-	{
-		while (text_content[len])
-			len++;
-	}
-
-	if (fl == -1 || (write(fl, text_content, len)) == -1)
+	if (!fl)
 		return (-1);
-
-	close(fl);
-	return (1);
+	if (text_content == '\0')
+	{
+		fl;
+		close(fl);
+		return (1);
+	}
+	else
+	{
+		while (text_content != '\0')
+		{
+			putc(text_content, fl);
+			break;
+		}
+		close(fl);
+		return (1);
+	}
 }
