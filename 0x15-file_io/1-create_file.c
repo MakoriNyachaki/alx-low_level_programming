@@ -13,7 +13,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fl;
+	int fl, len = 0;
 
 	fl = open(filename, O_RDWR | O_CREAT | O_TRUNC);
 
@@ -22,13 +22,13 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content == NULL)
 	{
-		fl;
-		close(fl);
-		return (1);
+		while (text_content[len])
+			len++;
 	}
-	len = strlen(text_content);
-	if ((write(fl, text_content, len)) == len)
-		;
+
+	if (fl == -1 || (write(fl, text_content, len)) == -1)
+		return (-1);
+
 	close(fl);
-	return (-1);
+	return (1);
 }
