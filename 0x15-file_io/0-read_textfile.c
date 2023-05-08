@@ -14,38 +14,32 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int elog, desc;
+	ssize_t rd, bw;
 
-	desc = open(filename, O_RDONLY);
+	FILE *fl = open(filename, "r");
 	char *mem = malloc(sizeof(char *) * letters);
 
 	if (filename == NULL)
 		return (0);
 
 	if (mem == NULL)
-		return (0);
-
-	if (desc == -1)
-		return (0);
-
-	if (read(desc, mem, letters))
 	{
-		free(mem);
+		fclose(fl);
 		return (0);
 	}
-	mem[letters] = '\0';
-	elog = write(STDOUT_FILENO, mem, read(desc, mem, letters));
+	rd = fread(mem, sizeof(char), letters, fl);
 
-	if (elog > 0)
+	if (rd < 0)
 	{
 		free(mem);
-		close(desc);
-		return (read(desc, mem, letters));
-	}
-	else
-	{
-		free(mem);
+		fclose(fl);
 		return (0);
 	}
+	mem[rd] = '\0';
+	bw = write(STDOUT_FILENO, mem, rd);
+	free(mem);
+	fclose(fl);
+	if (bw != rd)
+		return (0);
+	return (bw);
 }
-
