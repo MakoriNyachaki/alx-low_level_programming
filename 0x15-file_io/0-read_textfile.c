@@ -27,14 +27,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		fclose(fl);
 		return (0);
 	}
-	rd = fread(mem, sizeof(char), letters, fl);
 
-	if (rd < 0)
+	rd = read(fl, mem, letters);
+
+	if (!fl || !rd)
+		return (0);
+
+	if (rd == -1)
 	{
 		free(mem);
 		fclose(fl);
 		return (0);
 	}
+
 	mem[rd] = '\0';
 	bw = write(STDOUT_FILENO, mem, rd);
 	free(mem);
