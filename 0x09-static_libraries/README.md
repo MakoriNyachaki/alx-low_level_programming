@@ -13,8 +13,8 @@
     You are not allowed to use the standard library. Any use of functions like printf, puts, etc… is forbidden
     You are allowed to use _putchar
     You don’t have to push _putchar.c, we will use our file. If you do it won’t be taken into account
-    In the following examples, the main.c files are shown as examples. You can use them to test your functions, 
-    but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. 
+    In the following examples, the main.c files are shown as examples. You can use them to test your functions,
+    but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation.
     Our main.c files might be different from the one shown in the examples
     The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called main.h
     Don’t forget to push your header file
@@ -75,12 +75,49 @@ char *_strstr(char *haystack, char *needle);
 
 If you haven’t coded all of the above functions create empty ones with the right prototype.
 
-Don’t forget to push your _main.h_ file to your repository. 
+Don’t forget to push your _main.h_ file to your repository.
 
 It should at least contain all the prototypes of the above functions.
 
 ***[1. Without libraries what have we? We have no past and no future](https://github.com/MakoriNyachaki/alx-low_level_programming/blob/main/0x09-static_libraries/create_static_lib.sh)***
 
-Create a script called _create_static_lib.sh_ that creates a static library 
+Create a script called _create_static_lib.sh_ that creates a static library
 
 called _liball.a_ from all the _.c_ files that are in the current directory.
+
+
+**Steps for creating a static library**
+
+
+ * gcc -c *.c > This converts .c files to .o (object) files
+
+
+ * ar rcs libmy.a *.o
+
+
+ * ar rc libmy.a *.o > This creates the static library "Libmy.a"
+
+
+ * ar -t libmy.a > This lists all files in libmy.a
+
+
+ * ranlib libmy.a > This converts to random library
+
+    n creating a static library
+
+    gcc -c *.c > This converts .c files to .o (object) files
+
+    ar rcs libmy.a *.o
+
+    ar rc libmy.a *.o > This creates the static library "Libmy.a"
+
+    ar -t libmy.a > This lists all files in libmy.a
+
+    ranlib libmy.a > This converts to random library
+        After creating a static library and you would want to compile for testing use:
+
+            gcc -std=gnu89 main.c -L -lmy -o(new_file_name)
+
+* After creating a static library and you would want to compile for testing use:
+
+		 gcc -std=gnu89 main.c -L -lmy -o(new_file_name)
