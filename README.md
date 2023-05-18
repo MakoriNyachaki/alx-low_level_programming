@@ -1,5 +1,8 @@
 # ALX LOW LEVEL SOFTWARE ENGINEERING
 
+An opportunity awarded to learn Software Engineering by ALX Africa.
+It is amazing to relearn, rethink and start over again by starting with C programming.
+
 ## [1. 0x00. C - Hello, World](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x00-hello_world)
 
 ## [2. 0x01-variables_if_else_while](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x01-variables_if_else_while)
@@ -36,3 +39,8 @@
 
 ## [18. 0x12-singly_linked_list](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x12-singly_linked_lists)
 
+## [19. 0x13-more_singly_linked_lists](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x13-more_singly_linked_lists)
+
+## [20. 0x14-bit_manipulation](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x14-bit_manipulation)
+
+## [21. 0x15-file_io](https://github.com/MakoriNyachaki/alx-low_level_programming/tree/main/0x15-file_io)
